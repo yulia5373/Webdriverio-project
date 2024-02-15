@@ -24,7 +24,7 @@ exports.config = {
 
         // ToDo: define location for spec files here
 
-        'specs/**/automationbro.js'
+        'specs/**/wildberies.js'
     ],
     // Patterns to exclude.
     exclude: [

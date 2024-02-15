@@ -8,7 +8,9 @@
 
 //npx wdio
 
-describe('Autossugest', () => {
+const HomePage = require ('./pages/home-page.js')
+
+describe.only('Autossugest', () => {
     it.only('Add the item in a cart', async () => {
       const searchDropdown = await $('div.search-list.search-catalog');
       const firstElementinSearch = await $('div.card-grid > div:first-child');
@@ -16,12 +18,15 @@ describe('Autossugest', () => {
       const cartIcon = await $('a.user-menu__btn[href="/basket"]');
       const priceInCart = await $('user-menu__btn');
       const quantityPlusButton = await $('button.quantity__plus');
+
+
+      await HomePage.open('https://www.wildberries.by/');
   
-      await browser.url('https://www.wildberries.by/');
+      //await browser.url('https://www.wildberries.by/');
       await browser.maximizeWindow();
-      await $('input.search-component-input').addValue('iphone');
+      await HomePage.searchInput.addValue('iphone');
       await browser.pause(5000);
-      await browser.keys('Enter');
+      await HomePage.pressEnter;
 
 
       // // const priceofFirstItem = $('.card-grid > div:first-child span[data-tag="salePrice"]');
