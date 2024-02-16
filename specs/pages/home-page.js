@@ -13,7 +13,7 @@ class HomePage {
         return browser.keys('Enter');
     }
 
-}
+}a
 
 //export default HomePage;
 

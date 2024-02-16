@@ -10,8 +10,8 @@
 
 const HomePage = require ('./pages/home-page.js')
 
-describe.only('Autossugest', () => {
-    it.only('Add the item in a cart', async () => {
+describe ('Autossugest', () => {
+    it ('Add the item in a cart', async () => {
       const searchDropdown = await $('div.search-list.search-catalog');
       const firstElementinSearch = await $('div.card-grid > div:first-child');
       const addtoCartButton = await $('.card-grid > div:first-child button[data-tag="basketBtn"]');

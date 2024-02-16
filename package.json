@@ -13,6 +13,7 @@
   "dependencies": {
     "@wdio/cli": "^8.29.7",
     "core-js": "^3.35.1",
+    "faker": "^6.6.6",
     "webdriverio": "^8.29.7"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/register": "^7.23.7",
+    "@faker-js/faker": "^8.4.1",
     "@types/core-js": "^2.5.8",
     "@wdio/local-runner": "^8.29.7",
     "@wdio/mocha-framework": "^8.29.3",
