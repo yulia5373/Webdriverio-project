@@ -34,11 +34,14 @@ const continueBtn = await $('button[data-continue-to="password-container"]');
        await browser.pause(2000);
        await $('button[data-continue-to="captcha-and-submit-container"]').click();
        await browser.pause(2000);
-       const text = await $('div#root h2[data-theme="home.title"]');
+       //await browser.debug();
+       const text = await $('div.box.container p[data-theme="home.instructions"]');
+       console.log('Yulia' + text);
        const mess = await text.getText();
        console.log("Yulya "+ mess);
-       await browser.pause(2000);
+       
 await expect (mess).toEqual('Пожалуйста‚ решите эту задачу‚ чтобы мы знали‚ что вы реальный человек');
+
        //await $('#password').setValue('Paris12354!!**')
 // await browser.waitUntil(async ()=> {
 // const emailinInput = await $('#email');

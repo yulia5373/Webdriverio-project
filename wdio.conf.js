@@ -24,7 +24,7 @@ exports.config = {
 
         // ToDo: define location for spec files here
 
-        'specs/**/trainee_task.js'
+        'specs/**/github-pricing.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -53,7 +53,8 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        browserVersion: "122.0.6261.39"
     }],
 
     //
@@ -63,7 +64,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'trace',
+    logLevel: 'error',
     //
     // Set specific log levels per logger
     // loggers:

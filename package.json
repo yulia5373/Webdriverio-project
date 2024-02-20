@@ -12,8 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^8.29.7",
+    "chromedriver": "^121.0.2",
     "core-js": "^3.35.1",
-    "faker": "^6.6.6",
+    "faker": "^5.5.3",
     "webdriverio": "^8.29.7"
   },
   "devDependencies": {
