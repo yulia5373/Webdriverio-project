@@ -24,7 +24,7 @@ exports.config = {
 
         // ToDo: define location for spec files here
 
-        'specs/**/github-pricing.js'
+        'specs/**/topics.js'
     ],
     // Patterns to exclude.
     exclude: [
