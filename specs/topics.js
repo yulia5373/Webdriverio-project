@@ -5,11 +5,16 @@ import {browser, expect, $} from '@wdio/globals';
 const Topics = require ('./pages/topics.js')
 
 describe('Topics tests', () => {
-    it.skip('Open Topics and verify the page title', async () => {
+
+  before(async ()=>{
+    await Topics.openExploreUrl();
+    await browser.maximizeWindow();
+  })
+    xit('Open Topics and verify the page title', async () => {
       
 //Open Explore Url
-        await Topics.openExploreUrl();
-        await browser.maximizeWindow();
+        // await Topics.openExploreUrl();
+        // await browser.maximizeWindow();
         await Topics.topicsLink.click();
         const headerTopicText =await Topics.topicsHeader.getText();
         //console.log(`Yuliya and ${headerTopicText}`);
@@ -22,9 +27,9 @@ describe('Topics tests', () => {
     });
   });
 
-  it.only('Select keyword in Search', async () => {
-    await Topics.openExploreUrl();
-    await browser.maximizeWindow();
+  it('Select keyword in Search', async () => {
+    // await Topics.openExploreUrl();
+    // await browser.maximizeWindow();
     await Topics.topicsLink.click();
     await browser.pause(5000);
 
@@ -49,3 +54,24 @@ describe('Topics tests', () => {
    console.log(`Yulia ${currentUrl2}`);
    await expect(currentUrl2).toContain('webdriverio');
   });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////// Modal window
+  describe('Modal window', () => {
+    it.skip('Verify that the modal window is displayed', async () => {
+      // Test logic goes here
+      await browser.url('https://the-internet.herokuapp.com/entry_ad');
+      await $('#restart-ad').click();
+      await browser.pause(2000);
+      const modalWindow = await $('div.modal');
+      console.log('Yul' + modalWindow);
+      let isDisplayed = await modalWindow.isDisplayed();
+      
+      await expect (isDisplayed).toEqual(true);
+    await $('.modal-footer > p').click();
+    await browser.pause(2000);
+    console.log('Yul' + isDisplayed);
+    isDisplayed = await modalWindow.isDisplayed();
+    await expect (isDisplayed).toEqual(false);
+    });
+  });
+
