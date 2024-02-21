@@ -56,6 +56,7 @@ describe('Topics tests', () => {
   });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////// Modal window
+//test for git
   describe('Modal window', () => {
     it.skip('Verify that the modal window is displayed', async () => {
       // Test logic goes here
